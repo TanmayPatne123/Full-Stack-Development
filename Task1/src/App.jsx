@@ -1,9 +1,11 @@
 import React from 'react'
+import "./App.css"
+import Counter from './components/Counter'
 
 function App() {
   return (
     <div>
-      <h1>This is App.jsx</h1>
+      <Counter/>
     </div>
   )
 }
