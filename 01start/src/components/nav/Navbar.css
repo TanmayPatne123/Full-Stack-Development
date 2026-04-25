@@ -1,0 +1,75 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: black;
+    color: white;
+    height: 20px;
+    display: flex;
+}
+.leftPanel
+{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightPanel{
+    background-color: green;
+    width: 60%;
+}
+.rightPanel a{
+    color: white;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.main{
+    background-color: lightgray;
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    height: 70px;                 /* height increase */
+    display: flex;
+    justify-content: space-between; /* left-right proper spacing */
+    align-items: center;           /* vertical center */
+    padding: 0 40px;               /* side spacing */
+}
+
+.leftPanel h1 {
+    font-size: 22px;
+}
+
+.rightPanel {
+    display: flex;
+    align-items: center;
+    gap: 30px;                     /* links ke beech gap */
+}
+
+.rightPanel a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* hover effect */
+.rightPanel a:hover {
+    color: lightgreen;
+    border-bottom: 2px solid lightgreen;
+}
+
+.main {
+    background-color: lightgray;
+    min-height: 100vh;
+}

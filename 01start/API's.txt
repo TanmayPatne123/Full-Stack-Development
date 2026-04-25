@@ -1,0 +1,4 @@
+Get All Products
+----------------------------
+
+https://fakestoreapi.com/products

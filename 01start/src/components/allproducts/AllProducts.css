@@ -1,0 +1,16 @@
+.allProductsData{
+    margin-top: 50px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.card
+{
+    width: 250px;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+    height: 100%;
+}
