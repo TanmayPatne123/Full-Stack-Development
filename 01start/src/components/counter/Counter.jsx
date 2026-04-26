@@ -9,8 +9,6 @@ function Counter() {
 
     var [state,setState] = useState(0);
 
-    
-
     const increaseCount=()=>{
         setState(state+1);
     };

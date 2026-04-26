@@ -1,29 +1,31 @@
 
 import Header from './components/header/Header';
 import "./App.css"
-import Counter from './components/counter/Counter';
-import ImageComp from './components/Imagetask/ImageComp';
+// import Counter from './components/counter/Counter';
+// import ImageComp from './components/Imagetask/ImageComp';
 import Navbar from './components/nav/Navbar';
-import Home from './components/home/Home';
-import {Route,Routes} from "react-router-dom"
-import Products from './components/product/Products';
-import Electronics from "./components/product/categories/electronics/Electronics";
-import Jewelery from "./components/product/categories/jewelery/Jewelery";
-import MensClo from './components/product/categories/mensC/MensClo';
-import WomenClo from './components/product/categories/womensC/WomenClo';
-import PageNotFound from './components/pagenotfound/PageNotFound';
-import AllProducts from './components/allproducts/AllProducts';
-import Username from './components/user-names/Username';
-import A from './components/parent-child/A';
-import HomeContextApi from './components/context-api/HomeContextApi';
+// import Home from './components/home/Home';
+// import {Route,Routes} from "react-router-dom"
+// import Products from './components/product/Products';
+// import Electronics from "./components/product/categories/electronics/Electronics";
+// import Jewelery from "./components/product/categories/jewelery/Jewelery";
+// import MensClo from './components/product/categories/mensC/MensClo';
+// import WomenClo from './components/product/categories/womensC/WomenClo';
+// import PageNotFound from './components/pagenotfound/PageNotFound';
+// import AllProducts from './components/allproducts/AllProducts';
+// import Username from './components/user-names/Username';
+// import A from './components/parent-child/A';
+// import HomeContextApi from './components/context-api/HomeContextApi';
+import Counter from './components/reducer/Counter';
 
 function App() 
 {
   return (
     <div className="app">
       <Navbar/>
+      <Counter/>
       {/* <A/> */}
-      <HomeContextApi/>
+      {/* <HomeContextApi/> */}
       {/* <Routes>
       <Route path={"/"} element={<Home/>}/>
       <Route path={"/products"} element={<Products/>}>
