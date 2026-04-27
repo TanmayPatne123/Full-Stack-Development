@@ -4,7 +4,8 @@ import { useReducer } from 'react';
 import counterReducer from './counterReducer';
 
 
-function Counter() {
+function Counter() 
+{
 
    let [state,dispatch] = useReducer(counterReducer, {count:0});
     
