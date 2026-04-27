@@ -20,7 +20,8 @@ function HomeContextApi() {
       <input type="text" placeholder='Enter Text' onChange={(event)=>{
         setState(event.target.value)
       }}/>
-      <br></br> 
+      <br>
+      </br> 
       <button onClick={submitData}>Submit</button>
       <br />
       <hr/>
