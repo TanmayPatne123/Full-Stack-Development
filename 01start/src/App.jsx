@@ -17,13 +17,18 @@ import Navbar from './components/nav/Navbar';
 // import A from './components/parent-child/A';
 // import HomeContextApi from './components/context-api/HomeContextApi';
 import Counter from './components/reducer/Counter';
+import Name from './redux/compoents/Name';
+import Details from './redux/compoents/Details';
 
 function App() 
 {
   return (
     <div className="app">
       <Navbar/>
-      <Counter/>
+      <Name/>
+      <hr></hr>
+      <Details/>
+      {/* <Counter/> */}
       {/* <A/> */}
       {/* <HomeContextApi/> */}
       {/* <Routes>
