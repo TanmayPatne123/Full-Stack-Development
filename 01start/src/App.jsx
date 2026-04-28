@@ -20,6 +20,9 @@ import Counter from './components/reducer/Counter';
 import Name from './redux/compoents/Name';
 import Details from './redux/compoents/Details';
 
+
+
+
 function App() 
 {
   return (
@@ -28,6 +31,9 @@ function App()
       <Name/>
       <hr></hr>
       <Details/>
+
+
+      {/* ----------------------------------- */}
       {/* <Counter/> */}
       {/* <A/> */}
       {/* <HomeContextApi/> */}
@@ -45,6 +51,9 @@ function App()
       <Route path={"/imageComp"} element={<ImageComp/>}/>
       <Route path={"*"} element={<PageNotFound/>}/>
       </Routes>   */}
+
+
+
     </div>
   );
 }  
