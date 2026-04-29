@@ -17,9 +17,7 @@ function Name() {
 
     dispatch(actionObj);
    
-  };
-
-
+  }
 
   return (
     <div>
