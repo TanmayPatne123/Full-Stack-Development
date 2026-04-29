@@ -19,6 +19,7 @@ import Navbar from './components/nav/Navbar';
 import Counter from './components/reducer/Counter';
 import Name from './redux/compoents/Name';
 import Details from './redux/compoents/Details';
+import City from './redux/compoents/City';
 
 
 
@@ -28,9 +29,14 @@ function App()
   return (
     <div className="app">
       <Navbar/>
+
+      <div className='subContainer'>
       <Name/>
+      <City/>
+      </div>
       <hr></hr>
       <Details/>
+
 
 
       {/* ----------------------------------- */}

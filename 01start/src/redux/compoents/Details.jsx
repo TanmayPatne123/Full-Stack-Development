@@ -11,7 +11,10 @@ function Details() {
     <div>
       <h2>Details Component</h2>
       <p style={{color:"green",fontWeight:"bold"}}>
-        {data.name}
+       Name: {data.name}
+      </p>
+      <p style={{color:"green",fontWeight:"bold"}}>
+      City:  {data.city}
       </p>
     </div>
   )
