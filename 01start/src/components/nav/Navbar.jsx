@@ -19,6 +19,7 @@ function Navbar() {
                        <Link to="/allproducts">AllProducts</Link>
                        <Link to="/counter">Counter</Link>
                        <Link to="/username">UserNames</Link>
+                       <Link to="/redux">Redux</Link>
                        <p>{store}</p>
                     </div>
                 </div>
