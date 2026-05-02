@@ -2,12 +2,17 @@ import React from 'react'
 import axios from "axios";
 import "./AllProducts.css"
 import Card from './card/Card';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 function AllProducts()
  {
 
-    let [allproducts,setAllProducts] = useState([])
+    let [allproducts,setAllProducts] = useState([]);
+
+    useEffect(()=>{
+        getAllProducts();
+    },[])
+
 
     const getAllProducts= () =>
         {
@@ -15,9 +20,9 @@ function AllProducts()
         promiseObject
         .then((res)=>
             {
-            console.log("then");
-            console.log(res.data);
-            setAllProducts(res.data);
+            // console.log("then");
+            // console.log(res.data);
+            // setAllProducts(res.data);
         })
         .catch((error)=>
             {
@@ -41,7 +46,8 @@ function AllProducts()
             cum a atque, non quasi ipsum aspernatur reprehenderit, nihil veniam itaque repellendus natus 
             quos doloribus impedit sequi molestiae fugit perferendis iusto ab, illum vitae.
          Soluta vitae debitis magnam nemo aperiam ut! Perferendis, dicta perspiciatis? Tenetur, a.</p>
-         <button onClick={getAllProducts}>Click Me</button>
+
+         {/* <button onClick={getAllProducts}>Click Me</button> */}
 
           <div className="allProductsData">
                 {
