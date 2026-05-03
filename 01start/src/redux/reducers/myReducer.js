@@ -1,6 +1,7 @@
 const initialData= {
     name:"",
-    city:""
+    city:"",
+    products:[],
 };
 
 const myReducer = (state=initialData,action) => {
@@ -16,6 +17,12 @@ const myReducer = (state=initialData,action) => {
             ...state,
             city:action.cityName,
         };
+    }
+    else if(action.type==="PRODUCTS"){
+        state={
+            ...state,
+            products:action.payload,
+        }
     }
     return state;
 };

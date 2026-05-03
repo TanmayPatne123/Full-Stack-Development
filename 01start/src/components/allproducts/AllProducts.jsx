@@ -3,14 +3,24 @@ import axios from "axios";
 import "./AllProducts.css"
 import Card from './card/Card';
 import { useState,useEffect } from 'react';
+import { productsAction } from '../../redux/actions/productsAction';
+import {useDispatch,useSelector} from "react-redux";
 
 function AllProducts()
  {
 
     let [allproducts,setAllProducts] = useState([]);
 
+    let dispatch = useDispatch();
+
+    let productsData = useSelector((storedata)=>{
+        return storedata.products;
+    });
+
     useEffect(()=>{
-        getAllProducts();
+        if(productsData===0){
+            getAllProducts();
+        }
     },[])
 
 
@@ -20,9 +30,8 @@ function AllProducts()
         promiseObject
         .then((res)=>
             {
-            // console.log("then");
-            // console.log(res.data);
-            // setAllProducts(res.data);
+            var action = productsAction(res.data);
+            dispatch(action);
         })
         .catch((error)=>
             {
@@ -51,7 +60,7 @@ function AllProducts()
 
           <div className="allProductsData">
                 {
-                    allproducts.map(function(element)
+                    productsData.map(function(element)
                     {
                         return <Card 
                         image={element.image} 
