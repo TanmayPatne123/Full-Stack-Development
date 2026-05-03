@@ -18,7 +18,7 @@ function AllProducts()
     });
 
     useEffect(()=>{
-        if(productsData===0){
+        if(productsData.length === 0){
             getAllProducts();
         }
     },[])
@@ -63,6 +63,7 @@ function AllProducts()
                     productsData.map(function(element)
                     {
                         return <Card 
+                        id={element.id}
                         image={element.image} 
                         title={element.title} 
                         price={element.price}

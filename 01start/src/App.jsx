@@ -21,6 +21,7 @@ import Name from './redux/compoents/Name';
 import Details from './redux/compoents/Details';
 import City from './redux/compoents/City';
 import ReduxHome from './redux/compoents/ReduxHome';
+import ProductDetails from './components/product-details/ProductDetails';
 
 
 
@@ -54,6 +55,7 @@ function App()
       </Route>
       <Route path={"/allproducts"} element={<AllProducts/>}/>
       <Route path={"/counter"} element={<Counter/>}/>
+      <Route path={"/productdetails/:id/:x"} element={<ProductDetails/>}/>
       <Route path={"/username"} element={<Username/>}/>
       <Route path={"/imageComp"} element={<ImageComp/>}/>
       <Route path={"/redux"} element={<ReduxHome/>}/>

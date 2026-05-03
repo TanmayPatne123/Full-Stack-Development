@@ -15,7 +15,7 @@ function Navbar() {
                     </div>
                 <div class="rightPanel flexContainer">
                     <Link to="/">Home</Link>
-                      <Link to="/products">Products</Link>
+                      <Link to="/products">Category</Link>
                        <Link to="/allproducts">AllProducts</Link>
                        <Link to="/counter">Counter</Link>
                        <Link to="/username">UserNames</Link>
