@@ -1,0 +1,9 @@
+.d{
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
