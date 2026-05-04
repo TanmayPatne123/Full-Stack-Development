@@ -20,6 +20,7 @@ function Navbar() {
                        <Link to="/counter">Counter</Link>
                        <Link to="/username">UserNames</Link>
                        <Link to="/redux">Redux</Link>
+                       <Link to="/jasonserver">Users</Link>
                        <p>{store}</p>
                     </div>
                 </div>
