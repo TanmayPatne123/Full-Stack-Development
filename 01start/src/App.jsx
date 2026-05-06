@@ -63,14 +63,14 @@ function App()
       <Route path={"/redux"} element={<ReduxHome/>}/>
       <Route path={"/jasonserver"} element={<div style={{display:'flex',justifyContent:'space-evenly'}}>
           <NewUsers/>
-           <Users/>
+           <Users/>  
+            
+             
+              
       </div>
         }/>
       <Route path={"*"} element={<PageNotFound/>}/>
       </Routes>  
-
-
-
     </div>
   );
 }  
