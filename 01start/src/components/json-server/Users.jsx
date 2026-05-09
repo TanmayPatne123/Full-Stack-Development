@@ -1,14 +1,25 @@
-// import React, { useState } from 'react'
+
 import { useEffect } from 'react'
+import axios from 'axios';
 
 function Users({getUsers,users}) 
 {
 
-    
     useEffect(()=>{
         getUsers();
     },[]);
 
+    const deleteUser=(id)=>
+        {
+        axios.delete(`http://localhost:3000/result/${id}`)
+        .then((res)=> {
+            alert("User deleted successfully");
+        })
+        .catch((error)=> {
+            alert("failed to remove");
+            console.log(error);
+        });
+    }
    
   return (
     <div>
@@ -36,9 +47,7 @@ function Users({getUsers,users})
                                     <button>Edit</button>
                                 </td>
                                 <td>
-                                    <button>
-                                        Delete
-                                    </button>
+                                    <button onClick={()=>{deleteUser(element.id)}}> Delete </button>
                                 </td>
                             </tr>
                         })
