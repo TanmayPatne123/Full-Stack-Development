@@ -22,8 +22,7 @@ import Details from './redux/compoents/Details';
 import City from './redux/compoents/City';
 import ReduxHome from './redux/compoents/ReduxHome';
 import ProductDetails from './components/product-details/ProductDetails';
-import Users from './components/json-server/Users';
-import NewUsers from './components/json-server/NewUsers';
+import UserHome from './components/json-server/UserHome';
 
 
 
@@ -61,13 +60,9 @@ function App()
       <Route path={"/username"} element={<Username/>}/>
       <Route path={"/imageComp"} element={<ImageComp/>}/>
       <Route path={"/redux"} element={<ReduxHome/>}/>
-      <Route path={"/jasonserver"} element={<div style={{display:'flex',justifyContent:'space-evenly'}}>
-          <NewUsers/>
-           <Users/>  
-            
-             
-              
-      </div>
+      <Route path={"/jasonserver"} 
+      element={
+          <UserHome/>
         }/>
       <Route path={"*"} element={<PageNotFound/>}/>
       </Routes>  

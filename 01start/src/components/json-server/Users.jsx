@@ -1,29 +1,17 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from "axios";
 
 
-function Users() 
+function Users({getUsers,users}) 
 {
 
-    let[users,setUsers] = useState([]);
-
+    
     useEffect(()=>{
         getUsers();
     },[]);
 
-    const getUsers=()=>{
-        axios
-        .get("http://localhost:3000/result")
-        .then((res)=>{
-            console.log(res.data);
-            setUsers(res.data);
-        })
-        .catch((error)=>{
-            alert("something went wrong while accessing users");
-            console.log(error);
-        });
-    }
+   
   return (
     <div>
       <h2 style={{textAlign:"center",marginTop:"30px"}}>Users Information</h2>
