@@ -33,6 +33,7 @@ function Users()
             <table frame="box" rules="all" cellPadding="10" width={"100%"}>
                 <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Name</th>
                     <th>City</th>
                     <th colSpan={2}>Action</th>
@@ -42,6 +43,7 @@ function Users()
                     {
                         users.map((element)=>{
                             return <tr>
+                                <td>{element.id}</td>
                                 <td>{element.name}</td>
                                 <td>{element.city}</td>
                                 <td>

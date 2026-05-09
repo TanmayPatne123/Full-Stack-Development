@@ -1,6 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
+import axios from 'axios';
+
 // import City from '../../redux/compoents/City'
+
+// npx json-server --watch db.json
 
 function NewUsers() {
 
@@ -9,8 +13,18 @@ function NewUsers() {
     city:""
   });
 
-  const getNewUser=()=>{
-    console.log(newuser);
+  const getNewUser=()=>
+    {
+    axios
+    .post("http://localhost:3000/result",newuser)
+    .then((result) => 
+      {
+        console.log("Success",result);
+    })
+    .catch((err) => {
+      alert("NewUsers is not created")
+      console.log(err);
+    });
   }
 
   return (
