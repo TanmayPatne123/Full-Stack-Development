@@ -6,7 +6,7 @@ import axios from 'axios';
 
 // npx json-server --watch db.json
 
-function NewUsers() {
+function NewUsers({getUsers}) {
 
   let [newuser,setNewUser] = useState({
     name:"",
@@ -20,6 +20,7 @@ function NewUsers() {
     .then((result) => 
       {
         console.log("Success",result);
+        getUsers();
     })
     .catch((err) => {
       alert("NewUsers is not created")

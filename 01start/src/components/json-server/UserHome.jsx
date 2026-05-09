@@ -26,7 +26,7 @@ function UserHome() {
   return (
     <div>
       <div style={{display:'flex',justifyContent:'space-evenly'}}>
-                <NewUsers/>
+                <NewUsers getUsers={getUsers}/>
                  <Users getUsers={getUsers} users={users}/>   
             </div>
     </div>
