@@ -12,10 +12,13 @@ function Users({getUsers,users})
     const deleteUser=(id)=>
         {
         axios.delete(`http://localhost:3000/result/${id}`)
-        .then((res)=> {
+        .then((res)=> 
+            {
             alert("User deleted successfully");
+            getUsers();
         })
-        .catch((error)=> {
+        .catch((error)=> 
+            {
             alert("failed to remove");
             console.log(error);
         });
