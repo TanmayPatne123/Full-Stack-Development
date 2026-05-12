@@ -1,13 +1,33 @@
 import React from 'react'
-import { useState } from 'react'
+// import { useState } from 'react'
 import axios from 'axios';
 
 // import City from '../../redux/compoents/City'
 
 // npx json-server --watch db.json
 
-function NewUsers({getUsers,isNewUser,newuser,setNewUser}) 
+function NewUsers({getUsers,isNewUser,newuser,setNewUser,setIsNewUser}) 
 {
+
+  const updateUser=()=>{
+
+    axios.put(`http://localhost:3000/result/${newuser.id}`,newuser)
+    .then((res)=>{
+      alert("user updated");
+      getUsers();
+      setNewUser({
+          name:"",
+          city:""
+        });
+        setIsNewUser(true);
+    })
+    .catch((error)=>
+      {
+      alert("Went something wroug while updating User");
+      console.log(error);
+    })
+  }
+
 
   const addNewUser=()=>
     {
@@ -53,7 +73,8 @@ function NewUsers({getUsers,isNewUser,newuser,setNewUser})
         <option value="c4">c4</option>
         <option value="c5">c5</option>
       </select> <br /> <br />
-      <button onClick={addNewUser}>{isNewUser ? "New User":"Update User"}</button>
+      <button onClick={isNewUser ? addNewUser : updateUser}>
+        {isNewUser ? "New User":"Update User"}</button>
     </div>
   )
 }

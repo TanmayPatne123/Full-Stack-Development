@@ -32,8 +32,17 @@ function UserHome() {
   return (
     <div>
       <div style={{display:'flex',justifyContent:'space-evenly'}}>
-                <NewUsers getUsers={getUsers} isNewUser={isNewUser} setNewUser={setNewUser} newuser={newuser}/>
-                 <Users setIsNewUser={setIsNewUser} getUsers={getUsers} users={users}/>   
+                <NewUsers 
+                getUsers={getUsers} 
+                isNewUser={isNewUser} 
+                setIsNewUser={setIsNewUser}
+                setNewUser={setNewUser} 
+                newuser={newuser}/>
+                 <Users 
+                 setNewUser={setNewUser}
+                 setIsNewUser={setIsNewUser}
+                  getUsers={getUsers} 
+                  users={users}/>   
             </div>
     </div>
   )
