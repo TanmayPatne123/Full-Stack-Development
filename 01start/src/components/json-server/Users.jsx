@@ -2,12 +2,16 @@
 import { useEffect } from 'react'
 import axios from 'axios';
 
-function Users({getUsers,users}) 
+function Users({getUsers,users,setIsNewUser}) 
 {
 
     useEffect(()=>{
         getUsers();
     },[]);
+
+    const updateUser = () =>{
+        setIsNewUser(false);
+    }
 
     const deleteUser=(id)=>
         {
@@ -47,7 +51,9 @@ function Users({getUsers,users})
                                 <td>{element.name}</td>
                                 <td>{element.city}</td>
                                 <td>
-                                    <button>Edit</button>
+                                    <button onClick={()=>{
+                                        updateUser();
+                                        }}>Edit</button>
                                 </td>
                                 <td>
                                     <button onClick={()=>{deleteUser(element.id)}}> Delete </button>

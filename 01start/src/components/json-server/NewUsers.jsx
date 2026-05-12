@@ -6,21 +6,21 @@ import axios from 'axios';
 
 // npx json-server --watch db.json
 
-function NewUsers({getUsers}) {
+function NewUsers({getUsers,isNewUser,newuser,setNewUser}) 
+{
 
-  let [newuser,setNewUser] = useState({
-    name:"",
-    city:""
-  });
-
-  const getNewUser=()=>
+  const addNewUser=()=>
     {
     axios
     .post("http://localhost:3000/result",newuser)
     .then((result) => 
       {
-        console.log("Success",result);
+        alert("successfully new user created");
         getUsers();
+        setNewUser({
+          name:"",
+          city:""
+        })
     })
     .catch((err) => {
       alert("NewUsers is not created")
@@ -30,16 +30,21 @@ function NewUsers({getUsers}) {
 
   return (
     <div style={{padding:"10px"}}>
-      <h2>New User</h2>
-      <input 
-      onChange={(event)=>{setNewUser({...newuser,name:event.target.value});
+      <h2>{isNewUser ? "New User":"Update User"}</h2>
+      <input value={newuser.name}
+      onChange={(event)=>
+        {
+          setNewUser({...newuser,name:event.target.value});
     }}
       type='text' 
       placeholder='username'>
       </input>
       <br />
       <br/>
-      <select onChange={(event)=>{setNewUser({...newuser,city:event.target.value});
+      <select value={newuser.city}
+       onChange={(event)=>
+      {
+        setNewUser({...newuser,city:event.target.value});
     }}>
         <option>Select City</option>
         <option value="c1">c1</option>
@@ -48,7 +53,7 @@ function NewUsers({getUsers}) {
         <option value="c4">c4</option>
         <option value="c5">c5</option>
       </select> <br /> <br />
-      <button onClick={getNewUser}>New User</button>
+      <button onClick={addNewUser}>{isNewUser ? "New User":"Update User"}</button>
     </div>
   )
 }
