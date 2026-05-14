@@ -16,16 +16,16 @@
 // setInterval(printTime,2000);
 
 
-let num=0;
-function printNumber(){
-    num++;
-    if(num>=3)
-        {
-            clearInterval(store);
-        }
-        console.log(num);
-}
+// let num=0;
+// function printNumber(){
+//     num++;
+//     if(num>=3)
+//         {
+//             clearInterval(store);
+//         }
+//         console.log(num);
+// }
 
-let store= setInterval(printNumber,1000);
+// let store= setInterval(printNumber,1000);
 
 
