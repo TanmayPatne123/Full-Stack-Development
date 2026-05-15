@@ -1,16 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .container{
-    background-color: aqua;
-    height: 635px;
-    /* width: 900px; */
+    /* background-color: aqua; */
+    height: 100%;
     display: grid;
-    /* grid-template-rows: 133px 133px 133px;
-    grid-template-columns: 133px 133px 133px; */
-
-    grid-template-rows: repeat(3,1fr);
-    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(1,1fr);
     
-    row-gap: 12px;
-    column-gap: 12px;
 }
 
 .item
@@ -22,4 +21,77 @@
 {
     grid-column-start: 1;
     grid-column-end: 4;
+    height: 40px;
+    background-color: maroon;
 } 
+.item1 p{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.navbar{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+.left-navbar{
+    height: 70px;
+    width: 190px;
+    /* background-color: aqua; */
+}
+
+.left-navbar img{
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+}
+
+.right-navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.right-navbar a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.right-navbar a:hover{
+    background-color: maroon;
+    color: white;
+}
+
+.right-navbar button{
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: brown;
+    color: white;
+}
+.item3{
+    height: 40px;
+    background-color: maroon;
+    padding-top: 5px 0px 0px 20px;
+}
+
+.item3 p{
+    color: white;
+    margin: 10px 0px 0px 50px;
+}
+
+.item3 a{
+    color: white;
+    margin: 10px 0px 0px 50px;
+    font-size: 10px;
+}
