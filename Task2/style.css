@@ -21,7 +21,7 @@
 {
     grid-column-start: 1;
     grid-column-end: 4;
-    height: 40px;
+    height: 30px;
     background-color: maroon;
 } 
 .item1 p{
@@ -94,4 +94,56 @@
     color: white;
     margin: 10px 0px 0px 50px;
     font-size: 10px;
+}
+
+.item4{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 700px;
+    display: flex;
+}
+.left-body{
+    background-color: aliceblue;
+    height: 100%;
+    width: 33%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+.img1{
+    grid-row: 1/3;
+    height:300px;
+    background-color: antiquewhite;
+    border-radius: 30%;
+}
+.img2{
+    height: 100px;
+    background-color: aqua;
+    /* border-radius: 25%; */
+}
+.img3{
+    height: 300px;
+    background-color:aqua;
+    /* border-radius: 25%; */
+}
+.img4{
+    height: 300px;
+    width: 200px;
+    background-color: black;
+}
+.img5{
+    height: 250px;
+    width: 200px;
+    background-color: black;
+}
+.middle-body{
+    background-color: black;
+    height: 100%;
+    width: 33%;
+}
+.right-body{
+    background-color: palevioletred;
+    height: 100%;
+    width: 34%;
 }
