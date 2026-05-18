@@ -19,6 +19,9 @@ function Home() {
         minima vitae magni veniam consectetur delectus iste tempora eligendi.</p>
     </div>
   );
-}
+}  
+
+ 
+     
 
 export default Home
