@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import { BrowserRouter } from "react-router-dom";
 import {Provider} from 'react-redux'
 import myReduxStore from "./redux/store/Store";
+// import "bootstrap/dist/css/bootstrap.css";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

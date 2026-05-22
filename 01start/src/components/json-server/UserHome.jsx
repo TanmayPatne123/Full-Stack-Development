@@ -16,14 +16,17 @@ function UserHome() {
         city:""
       });
 
-     const getUsers=()=>{
+     const getUsers=()=>
+      {
             axios
             .get("http://localhost:3000/result")
-            .then((res)=>{
+            .then((res)=>
+              {
                 console.log(res.data);
                 setUsers(res.data);
             })
-            .catch((error)=>{
+            .catch((error)=>
+              {
                 alert("something went wrong while accessing users");
                 console.log(error);
             });
