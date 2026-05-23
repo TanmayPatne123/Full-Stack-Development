@@ -23,6 +23,8 @@ import City from './redux/compoents/City';
 import ReduxHome from './redux/compoents/ReduxHome';
 import ProductDetails from './components/product-details/ProductDetails';
 import UserHome from './components/json-server/UserHome';
+import Search from './components/gridlaouts/Search';
+import GridHome from './components/gridlaouts/GridHome';
 
 
 
@@ -31,7 +33,7 @@ function App()
 {
   return (
     <div className="app">
-      <Navbar/>
+      {/* <Navbar/>
 
       {/* <div className='subContainer'>
       <Name/>
@@ -46,7 +48,7 @@ function App()
       {/* <Counter/> */}
       {/* <A/> */}
       {/* <HomeContextApi/> */}
-      <Routes>
+      {/* <Routes>
       <Route path={"/"} element={<Home/>}/>
       <Route path={"/products"} element={<Products/>}>
       <Route path={"electronics"} element={<Electronics/>}/>
@@ -65,7 +67,9 @@ function App()
           <UserHome/>
         }/>
       <Route path={"*"} element={<PageNotFound/>}/>
-      </Routes>  
+      </Routes>   */}
+
+      <GridHome/>
     </div>
   );
 }  
