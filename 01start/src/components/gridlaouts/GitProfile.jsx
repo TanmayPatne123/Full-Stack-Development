@@ -9,13 +9,13 @@ function GitProfile() {
       <div className="card-header">
         <img
           src="https://avatars.githubusercontent.com/u/1?v=4"
-          width="100%"
-          height="200"
+          width="60%"
+          height="90"
         />
       </div>
 
       <div className="card-body">
-        <h3>Groove Guide</h3>
+        <h3>Tanmay Patne</h3>
 
         <p>
           Lorem ipsum dolor sit amet consectetur

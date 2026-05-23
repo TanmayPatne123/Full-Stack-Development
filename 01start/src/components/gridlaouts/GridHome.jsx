@@ -23,7 +23,7 @@ function GridHome() {
         <div className="col-8">
           <GitDetails />
         </div>
-
+        
       </div>
 
     </div>
